@@ -9,8 +9,10 @@ html, body {
 .container {
   width: 960px;
   margin: 0 auto;
-
   }
+div {
+  display: block;
+}
 
 /* header */
 
@@ -41,7 +43,7 @@ main {
 }
 
 .main-banner {
-  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
+  background-image: url("../images/moto.jpeg");
   background-color: red;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,4 +107,69 @@ li a:hover {
     background-color: white;
     color: firebrick;
     padding: 0.75rem 1rem;
+  }
+
+  /* Product list */
+
+.products {
+  width: 100%;
+  margin: 3rem 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.product {
+  width: 30%;
+}
+
+.product-image {
+  border: 4px solid black;
+  height: 9rem;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0px;
+}
+
+.product-image img {
+  max-width: 8rem;
+}
+img {
+  border-style: none;
+}
+
+figcaption {
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Business info */
+
+.business-info {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  width: 35%;
+}
+
+.info h1 {
+  color: white;
+  background-color: black;
+  padding: 1rem 2rem;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 4rem;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  padding: 5rem 0px;
   }
