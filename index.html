@@ -2,32 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Secret Agent Supply Inc.</title>
+    <title>Secret Agent Supply Inc. | Home</title>
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secret Agent Supplies">
+    <meta name="keywords" content="Agent pen, Eyewear, agent apparel, gadgets">
+    <meta name="author" content="Positive 3 Creative Agency">
   </head>
 
   <body>
     <header>
-      <div class="company">
-        <div class="container">
-          <img src="./resources/images/logo-binocular.png" alt="logo-secret-agent" />
-          <h1> SECRET AGENT SUPPLY INC.</h1>
+      <div class="container">
+        <div id="branding">
+          <div class="logo">
+            <img src="./resources/images/logo-binocular.png" alt="logo-secret-agent" />
+          </div>
+          <h1><span class="highlight">SECRET</span> AGENT SUPPLY INC.</h1>
         </div>
+        <nav id="top-nav">
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
       <!-- Main Banner -->
-      <div class="main-banner">
+      <section id="showcase">
         <div class="container">
           <div class="headline">
             <h4>NEW ARRIVAL</h4>
             <h1>SPORT BIKES AND MOTORCYCLES</h1>
           </div>
         </div>
-      </div>
+      </section>
        <!-- Navigation Bar -->
       <section>
         <nav>
@@ -36,7 +48,7 @@
             <li><a href="#">Apparel</a></li>
             <li><a href="#">Gadgets</a></li>
             <li><a href="#">Vehicles</a></li>
-            <li><a href="#">Classes</a></li>
+            <li><a href="#">Glasses</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
           <!-- mobile-nav container -->
@@ -46,23 +58,23 @@
         </nav>
       </section>
 
-      <!-- Product and Business Info -->
 
-        <div class="container">
-          <div class="products">
-            <div class="product pen">
+      <!-- Product and Business Info -->
+        <div id="boxes">
+          <div class="container">
+            <div class="box pen">
               <div class="product-image">
                 <img src="./resources/images/pen.png" alt="exploding-pen" />
               </div>
               <figcaption>Exploding Pen</figcaption>
             </div>
-            <div class="product watch">
+            <div class="box watch">
               <div class="product-image">
                 <img src="./resources/images/watch.png" alt="cellular-watch" />
               </div>
               <figcaption>Cellular Watch</figcaption>
             </div>
-            <div class="product glasses">
+            <div class="box glasses">
                 <div class="product-image">
                   <img src="./resources/images/glasses.png" alt="thermal-glasses" />
                 </div>
@@ -71,23 +83,35 @@
           </div>
         </div>
 
-        <div class="container">
-          <div class="business-info">
-            <div class="info">
+        <section id="business-info">
+          <div class="container">
+            <div class="info location">
               <h1>Location</h1>
               <p>-47.346436, 84.32354</p>
             </div>
-            <div class="info">
+            <div class="info hours">
               <h1>Hours</h1>
               <p>0800 - 1800</p>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Newsletter  -->
+        <section id="newsletter">
+          <div class="container">
+            <h1> Subscribe to Our Newsletter</h1>
+            <form>
+              <input type="email" placeholder="Enter Email..."/>
+              <button type="submit" class="button_1">Subscribe</button>
+            </form>
+          </div>
+        </section>
       </main>
+
 <!-- Footer -->
     <footer>
       <div class="container">
-        <h4>Copyright Secret Agent Supply Inc.</h4>
+        <h4>Copyright &copy; Secret Agent Supply Inc.</h4>
       </div>
     </footer>
   </body>
