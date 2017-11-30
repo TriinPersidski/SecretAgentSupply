@@ -14,8 +14,8 @@ html, body {
 /* Global */
 
 .container {
-  width: 80%;
-  margin: auto;
+  width: 70%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -65,8 +65,9 @@ header #top-nav a {
 
 #top-nav ul {
  float: right;
- margin-top: 0px;
+ margin-top: 0.25rem;
  text-align: center;
+
  }
 
 header #top-nav li {
@@ -75,7 +76,7 @@ header #top-nav li {
   background-color: black;
 }
 
-#branding h1 {
+#branding span {
   float: left;
   display: inline-block;
   border: 0px solid white;
@@ -86,7 +87,7 @@ header #top-nav li {
 #branding img {
   border: 0px solid white;
   display: block;
-  height: 2rem;
+  height: 1.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   float: left;
@@ -158,6 +159,7 @@ nav ul {
 nav li {
   display: inline-block;
   padding: 0.75rem 0.5rem;
+  text-transform: uppercase;
   }
 
 nav li a {
@@ -186,7 +188,7 @@ nav li a:hover {
   width: 30%;
   border: 4px solid black;
   display: inline-block;
-  margin: 1rem;
+  margin: 0.5rem;
   }
 
 .product-image {
@@ -195,13 +197,12 @@ nav li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0px solid black;
   }
 
 figcaption {
   color: white;
   background-color: black;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   text-align: center;
   }
 
@@ -213,15 +214,26 @@ figcaption {
 
 #business-info {
   width: 100%;
-  display: flex;
-  margin-top: 4rem;
+  display: inline-block;
+  margin-top: 3rem;
   }
 
-.info h1 {
+.info {
   width: 35%;
+}
+
+.info.location {
+  float: left;
+}
+
+.info.hours {
+  float: right;
+}
+
+#business-info .info h1 {
   color: white;
   background-color: black;
-  padding: 1rem 2rem;
+  padding: 1rem 0 1rem 2rem;
 }
 
 /* Services Quote form */
@@ -238,39 +250,37 @@ ul#services li {
 
 #newsletter {
  width: 100%;
- height: 200px;
- margin: 0;
- max-height: 4rem;
+ min-height: 4rem;
  color: white;
  background-color: #35424a;
  text-align: center;
  margin-top: 4rem;
+ margin-bottom: 0;
 }
 
 #newsletter h1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
   font-size: 1.25rem;
   float: left;
   }
 
 #newsletter form {
 float: right;
-margin-top: 1rem;
-margin-bottom: 1rem;
+padding: 1rem 0 1rem 0;
 }
 
+/* Not working, need to enlarge input */
 #newsletter input(type="email") {
 padding: 0.25rem;
-height: 4rem;
-width: 15.625rem;
+height: 3rem;
+width: 90%;
 }
 
 /* footer */
 
 footer{
-  height: 7rem;
-  padding-top: 3rem;
+  height: 5rem;
+  padding-top: 2.3rem;
   margin-top: 0rem;
   color: white;
   background-color: black;
@@ -318,8 +328,15 @@ article #main-col {
     header {
       padding-bottom: 20px;
     }
+    .container {
+      width: 100%;
+    }
+    #showcase {
+      padding: 0.5rem 0.75rem;
+    }
     #showcase h1 {
-      margin-top: 40px;
+      padding-top: 0.35rem
+      margin-top: 1.5rem;
     }
     .desktop-nav {
       display: none;
@@ -331,19 +348,30 @@ article #main-col {
       text-align: center;
       font-size: 1.25rem;
     }
+
+    #boxes.box {
+      width: 47%;
+
+    }
+    #boxes.box.glasses {
+      display: none;
+    }
     #newsletter {
       height: 100%;
-      margin-bottom: 4rem;
+      padding: 1.5rem 0;
     }
     #newsletter button, .quote button {
       display: block;
-      width: 100%;
+      width: 50%;
+      margin: 0 auto;
       height: auto;
       padding: 1rem;
+      margin-top: 0.75rem;
     }
+    /*not working */
     #newsletter form input(type="email"), .quote input, .quote textarea {
       width: 100%;
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -352,20 +380,23 @@ article #main-col {
   @media only screen and (max-width: 470px) {
   body {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
-    header #branding h1 {
+    header #branding span {
      display: none;
    }
+   /* not working */
+   header #branding img {
+     margin: 0 auto;
+   }
     #showcase {
-      height: 15rem;
+      max-height: 15rem;
     }
     .headline {
       width: 100%;
-      top: 9.4rem;
+      margin-top: 10rem;
       padding: 1rem 2rem;
       margin: 0 auto;
-      float: left;
     }
     .headline h4 {
       font-size: 0.77rem;
@@ -380,18 +411,14 @@ article #main-col {
     }
     .boxes, #business-info {
      display: flex;
-      width: 100%;
-      height: auto;
-    }
-    .product-image {
-      min-width: 90%;
+     width: 100%;
+     height: auto;
     }
 
     .product.figcaption {
       width: 100%;
-
     }
-    .watch, .glasses {
+    .box.watch, .box.glasses {
       display: none;
     }
     #business-info {
